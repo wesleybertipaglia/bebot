@@ -22,3 +22,7 @@
 # Ignore system files
 .DS_Store
 Thumbs.db
+
+# Ignore files for security
+*.key
+*.pub

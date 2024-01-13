@@ -1,6 +1,6 @@
 # Contributing to the Learning Repository
 
-Thank you for your interest in contributing to the Learning Repository. Your contributions can help make this repository a valuable resource for the community. Whether you want to fix a typo, add new content, or improve existing materials, your help is greatly appreciated.
+Thank you for your interest in contributing to this repository. Your contributions can help make this repository a valuable resource for the community. Whether you want to fix a typo, add new content, or improve existing materials, your help is greatly appreciated.
 
 ## How to Contribute
 
@@ -9,7 +9,7 @@ Thank you for your interest in contributing to the Learning Repository. Your con
 2. **Clone the Repository**: Clone your forked repository to your local machine:
 
    ```
-   git clone https://github.com/{user}/{repository}.git
+   git clone https://github.com/wesleybertipaglia/bebot.git
    ```
 
 3. **Create a New Branch**: Create a new branch for your contribution:

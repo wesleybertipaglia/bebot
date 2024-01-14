@@ -14,6 +14,7 @@
 
 # Ignore package manager directories
 /node_modules/
+package-lock.json
 /packages/
 
 # Ignore log files

@@ -1,26 +1,31 @@
 {
-  "name": "bb-bot",
+  "name": "bebot",
   "version": "1.0.0",
   "description": "discord server bot",
   "main": "index.ts",
+  "type": "module",
   "scripts": {
-    "dev": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "dev": "nodemon -r ts-node/register .",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "b-bot"
+    "url": "https://github.com/wesleybertipaglia/bebot"
   },
   "keywords": [
-    "discord",
-    "server",
     "bot",
-    "ts"
+    "discord",
+    "server"
   ],
   "author": "Wesley Bertipaglia",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.14.1",
     "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }

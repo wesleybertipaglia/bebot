@@ -1,15 +1,12 @@
+const compliments = require("../data/compliments.json");
+
 module.exports = {
   name: "compliment",
   description: "Receive a compliment!",
+  compliments: compliments,
   execute(message, args) {
-    const compliments = [
-      "You are amazing!",
-      "Your positivity is infectious.",
-      "You make a difference in the world.",
-    ];
-
     const randomCompliment =
-      compliments[Math.floor(Math.random() * compliments.length)];
+      compliments[Math.floor(Math.random() * this.compliments.length)];
     message.reply(randomCompliment);
   },
 };

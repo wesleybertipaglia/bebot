@@ -35,10 +35,10 @@ if (!botPrefix && !botToken) {
 
 // server creation / delete
 client.on("guildCreate", (guild) => {
-  console.log(`Bot entrou no servidor ${guild.name}`);
+  console.log(`Bot joined to ${guild.name} server.`);
 });
 client.on("guildDelete", (guild) => {
-  console.log(`Bot saiu do servidor ${guild.name}`);
+  console.log(`Bot get out from ${guild.name} server.`);
 });
 
 // commands
@@ -64,14 +64,14 @@ client.on("messageCreate", (message) => {
 
   const command = client.commands.get(args.shift()?.toLowerCase());
   if (!command) {
-    message.reply("Quando eu souber o que fazer, te aviso!");
+    message.reply("Command not found!");
     return;
   } else {
     try {
       command.execute(message, args, client.commands);
     } catch (error) {
       console.error(error);
-      message.reply("Ocorreu um erro ao executar o comando!");
+      message.reply(`Error: ${error}`);
     }
   }
 });

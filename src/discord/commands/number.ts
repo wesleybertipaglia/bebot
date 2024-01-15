@@ -1,4 +1,6 @@
-module.exports = {
+import { Command } from "../../types/Command";
+
+export const number: Command = {
   name: "number",
   description: "Generate a random number",
   execute(message, args) {

@@ -1,14 +1,14 @@
-module.exports = {
+import { Command } from "../../types/Command";
+
+export const dog: Command = {
   name: "dog",
   description: "Get a cute dog picture!",
-  async execute(message, args) {
+  async execute(message) {
     try {
       const response = await fetch("https://dog.ceo/api/breeds/image/random");
       const data = await response.json();
 
-      if (!data || !data.message) {
-        throw new Error("Failed to fetch dog image.");
-      }
+      if (!data || !data.message) throw new Error("Failed to fetch dog image.");
 
       const dogImageUrl = data.message;
       message.reply(`Here's a cute dog picture!`);
@@ -16,7 +16,7 @@ module.exports = {
     } catch (error) {
       console.error(error);
       message.reply(
-        `Failed to fetch a cute dog picture. Please try again later :(, ${error}`
+        `Failed to fetch a cute dog picture, please try again later. Error: ${error}`
       );
     }
   },

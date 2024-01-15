@@ -1,4 +1,6 @@
-module.exports = {
+import { Command } from "../../types/Command";
+
+export const say: Command = {
   name: "say",
   description: "Repeat what you say",
   execute(message, args) {

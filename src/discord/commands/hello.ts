@@ -1,7 +1,9 @@
-module.exports = {
+import { Command } from "../../types/Command";
+
+export const hello: Command = {
   name: "hello",
   description: "Say hello!",
-  execute(message, args) {
+  execute(message) {
     message.reply(`Hello!, ${message.author}!`);
   },
 };

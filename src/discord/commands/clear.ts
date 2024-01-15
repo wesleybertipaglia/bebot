@@ -1,4 +1,6 @@
-module.exports = {
+import { Command } from "../../types/Command";
+
+export const clear: Command = {
   name: "clear",
   description: "Clear a specified number of messages",
   async execute(message, args) {
@@ -21,6 +23,6 @@ module.exports = {
 
     message
       .reply(`Cleared ${amount} messages.`)
-      .then((msg) => msg.delete({ timeout: 3000 }));
+      .then((msg: any) => msg.delete({ timeout: 3000 }));
   },
 };
